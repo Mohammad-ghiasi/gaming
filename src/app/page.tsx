@@ -1,9 +1,12 @@
+import Changer from "@/components/switcherMode/Switch";
+import Navbar from "@/components/navbar/Navbar";
+import { Box, Button, Text } from "@chakra-ui/react";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <>
-      <h1 className="bg-red-400 font-extrabold">mohammad ghiasi</h1>
+      <Navbar />
     </>
   );
 }

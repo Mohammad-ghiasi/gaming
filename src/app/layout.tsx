@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/providers/ChackraProvider";
+import { ColorModeScript } from "@chakra-ui/react";
+import theme from "@/themes/darkLigth";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["cyrillic"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,7 +20,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Providers>{children}</Providers>
+        <Providers>
+          <ColorModeScript initialColorMode={theme?.config.initialColorMode} />
+          {children}
+        </Providers>
       </body>
     </html>
   );
