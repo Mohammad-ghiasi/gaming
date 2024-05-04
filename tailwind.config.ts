@@ -10,7 +10,11 @@ const config: Config = {
     extend: {
       colors: {
         hoverOrange: "#cd7721"
-      }
+      },
+      padding: {
+        'smallSC-P': '12px', // Example custom padding value
+        'largSC-P': '40px', // Example large custom padding value
+      },
     },
   },
   plugins: [],

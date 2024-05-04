@@ -11,7 +11,7 @@ export default function Navbar(): JSX.Element {
 
   return (
     <Flex
-      className="p-3 md:px-10 md:pt-6"
+      className="p-smallSC-P md:px-largSC-P md:py-6"
       as="nav"
       align="center"
       justify="space-between"

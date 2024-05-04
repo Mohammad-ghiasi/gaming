@@ -3,7 +3,7 @@ import { Text } from "@chakra-ui/react";
 export default function Home() {
   return (
     <>
-    <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, rem minima! Itaque iste tempore animi, saepe facere earum mollitia maxime et, molestiae, perferendis eos. Iste rem eveniet cupiditate veritatis minima.
+    <Text className="p-smallSC-P md:px-largSC-P text-lg font-semibold leading-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, rem minima! Itaque iste tempore animi, saepe facere earum mollitia maxime et, molestiae, perferendis eos. Iste rem eveniet cupiditate veritatis minima.
     Et veritatis eaque quidem quos veniam consectetur enim reprehenderit ipsum harum corporis amet, eligendi culpa, repellat inventore esse ex ipsa, in impedit magnam sint ducimus labore saepe aliquam dignissimos! Eum?
     Sit libero maiores eos deserunt laudantium atque doloremque, reprehenderit cum, veniam assumenda dolorem quae nulla neque culpa distinctio impedit voluptate hic pariatur reiciendis earum porro non aperiam. Pariatur, adipisci! Suscipit.
     Dicta, iusto vero. Vel voluptate quam laudantium! Recusandae, doloribus minima quibusdam veniam id aut vero vel ratione ea a aspernatur optio culpa ipsum nulla similique voluptate nam dolores magni placeat?
