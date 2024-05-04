@@ -1,11 +1,11 @@
 import { useColorMode } from "@chakra-ui/react";
 
-export function Moder (): "#141121" | "#ebebeb" {
+export function Moder (dark: string, light: string): string {
     const { colorMode } = useColorMode();
     // colorMode === "dark" ? "#141121" : "#ebebeb"
     if (colorMode === "dark") {
-        return "#141121"
+        return dark
     }else{
-        return "#ebebeb"
+        return light
     }
 }

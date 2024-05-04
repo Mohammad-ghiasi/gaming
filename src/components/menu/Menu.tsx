@@ -17,16 +17,16 @@ export default function MenuBar() {
             >
                 <MdMoreHoriz size='25px' />
             </MenuButton>
-            <MenuList bg={Moder()} >
-                <MenuItem  bg={Moder()}><Text className="transition hover:scale-110"><Changer /></Text></MenuItem>
+            <MenuList bg={Moder("#141121", "#ebebeb")} >
+                <MenuItem  bg={Moder("#141121", "#ebebeb")}><Text className="transition w-[100%] hover:scale-[105%]"><Changer dark={"Dark mode"} light={"Ligth mode"}/></Text></MenuItem>
                 <Divider />
-                <MenuItem  bg={Moder()}><Text className="transition hover:scale-110">Create a Copy</Text></MenuItem>
+                <MenuItem  bg={Moder("#141121", "#ebebeb")}><Text className="transition w-[100%] hover:scale-[105%]">Leaderboard</Text></MenuItem>
                 <Divider />
-                <MenuItem  bg={Moder()}><Text className="transition hover:scale-110">Mark as Draft</Text></MenuItem>
+                <MenuItem  bg={Moder("#141121", "#ebebeb")}><Text className="transition w-[100%] hover:scale-[105%]">@Rawgtheword</Text></MenuItem>
                 <Divider />
-                <MenuItem  bg={Moder()}><Text className="transition hover:scale-110">Delete</Text></MenuItem>
+                <MenuItem  bg={Moder("#141121", "#ebebeb")}><Text className="transition w-[100%] hover:scale-[105%]">@Rawgthepictures</Text></MenuItem>
                 <Divider />
-                <MenuItem  bg={Moder()}><Text className="transition hover:scale-110">Attend a Workshop</Text></MenuItem>
+                <MenuItem  bg={Moder("#141121", "#ebebeb")}><Text className="transition w-[100%] hover:scale-[105%]">Sitemap</Text></MenuItem>
             </MenuList>
         </Menu>
     )

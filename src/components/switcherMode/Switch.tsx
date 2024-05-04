@@ -1,22 +1,27 @@
 "use client"
-import React from 'react'
+import React, { ReactNode } from 'react'
 import { Button, useColorMode, IconButton, Text } from '@chakra-ui/react'
-import {FaMoon, FaSun } from "react-icons/fa";
+import { FaMoon, FaSun } from "react-icons/fa";
 
-const Changer = () => {
-    const { colorMode, toggleColorMode } = useColorMode()
+type ChangerProps = {
+  dark: string | ReactNode; // Type can be string or ReactNode
+  light: string | ReactNode; // Type can be string or ReactNode
+};
+const Changer = (props: ChangerProps) => {
+  const { colorMode, toggleColorMode } = useColorMode()
 
-    return (
-        // <Switch isChecked={colorMode === "dark"} onChange={toggleColorMode} />
-        // <Button colorScheme='blue' onClick={toggleColorMode}>
-        //     {colorMode === "dark" ? "Light Mode" : "Dark Mode"}
-        // </Button>
-        <Text
-          onClick={toggleColorMode}
-          aria-label="Toggle dark mode"
-          variant="ghost"
-        >{colorMode === "light" ? "Dark mode" : "Ligth mode"}</Text>
-    )
+  return (
+    // <Switch isChecked={colorMode === "dark"} onChange={toggleColorMode} />
+    // <Button colorScheme='blue' onClick={toggleColorMode}>
+    //     {colorMode === "dark" ? "Light Mode" : "Dark Mode"}
+    // </Button>
+    <Text
+      cursor="pointer"
+      onClick={toggleColorMode}
+      aria-label="Toggle dark mode"
+      variant="ghost"
+    >{colorMode === "light" ? (props?.dark) : (props?.light)}</Text>
+  )
 }
 
 export default Changer

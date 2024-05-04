@@ -5,6 +5,7 @@ import { FaSearch } from "react-icons/fa";
 import { MdStarRate } from "react-icons/md";
 
 import { useEffect, useRef } from "react";
+import { Moder } from '@/moder/moder';
 
 const SearchInput = () => {
     const { colorMode } = useColorMode();
@@ -29,7 +30,7 @@ const SearchInput = () => {
                 <Button
                     aria-label='Send email'
                     size="sm"
-                    bg={colorMode === "dark" ? "#141121" : "#ebebeb"}
+                    bg={Moder("#141121", "#ebebeb")}
                     leftIcon={<MdStarRate size='17px' />}
                     // textColor='black'
                     paddingRight='26px'
@@ -53,7 +54,7 @@ const SearchInput = () => {
                 <Input
                     w="100%"
                     ref={inputRef}
-                    bg={colorMode === "dark" ? "#141121" : "#ebebeb"}
+                    bg={Moder("#141121", "#ebebeb")}
                     type="text"
                     _hover={{ bg: colorMode === "dark" ? "gray.700" : "gray.200" }} // Change background color of input on hover based on color mode
                     rounded="full"

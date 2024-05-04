@@ -16,26 +16,23 @@ export default function ModalSearch() {
       />
 
       <Modal
-
+        
         isOpen={isOpen}
         onClose={onClose}
       >
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>Search Games</ModalHeader>
-          <ModalCloseButton />
-          <ModalBody pb={6}>
+          <ModalBody >
             <FormControl>
-              <FormLabel>Itrate between games</FormLabel>
               <Input placeholder='Game Name...' />
             </FormControl>
           </ModalBody>
 
-          <ModalFooter>
-            <Button colorScheme='blue' mr={3}>
+          <ModalFooter justifyContent="flex-start">
+            <Button variant='outline'>
               Search
             </Button>
-            <Button onClick={onClose}>Cancel</Button>
           </ModalFooter>
         </ModalContent>
       </Modal>
