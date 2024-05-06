@@ -4,7 +4,9 @@ import "./globals.css";
 import { Providers } from "@/providers/ChackraProvider";
 import { ColorModeScript } from "@chakra-ui/react";
 import theme from "@/themes/darkLigth";
-import Navbar from "@/components/navbar/Navbar";
+import Navbar from "@/components/headers/navbar/Navbar";
+import ReduxProvider from "@/providers/ReduxProvider";
+import ReactQueryProvider from "@/providers/ReactQueryProvider";
 
 const inter = Inter({ subsets: ["cyrillic"] });
 
@@ -19,18 +21,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <Providers>
-          <ColorModeScript initialColorMode={theme?.config.initialColorMode} />
-          <header>
-          <Navbar />
-          </header>
-          <main>
-            {children}
-          </main>
-        </Providers>
-      </body>
-    </html>
+    <ReduxProvider>
+      <html lang="en">
+        <body className={inter.className}>
+          <Providers>
+            <ColorModeScript initialColorMode={theme?.config.initialColorMode} />
+            <ReactQueryProvider>
+              <header>
+                <Navbar />
+              </header>
+              <main>
+                {children}
+              </main>
+            </ReactQueryProvider>
+          </Providers>
+        </body>
+      </html>
+    </ReduxProvider>
   );
 }
