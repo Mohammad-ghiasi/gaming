@@ -4,5 +4,9 @@
 
 
 /* h1{
-    color: #141121
+    color: #aeaeae
 } */
+
+.chakra-accordion__button, .css-uttm9k, .chakra-accordion__panel{
+    padding: 0 !important;
+}

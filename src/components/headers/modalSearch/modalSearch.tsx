@@ -25,7 +25,7 @@ export default function ModalSearch() {
           <ModalHeader>Search Games</ModalHeader>
           <ModalBody >
             <FormControl>
-              <Input placeholder='Game Name...' />
+              <Input placeholder='Game Name...' />   
             </FormControl>
           </ModalBody>
 
