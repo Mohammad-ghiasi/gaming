@@ -7,6 +7,6 @@
     color: #aeaeae
 } */
 
-.chakra-accordion__button, .css-uttm9k, .chakra-accordion__panel{
+.chakra-accordion__button, .css-uttm9k, .chakra-accordion__panel, .chakra-card__body{
     padding: 0 !important;
 }

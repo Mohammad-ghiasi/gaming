@@ -33,7 +33,7 @@ import SubItemImage from './SubItemImage'
 
 export default function VerticalNav() {
     return (
-        <Box className='hidden md:flex flex-col space-y-7'>
+        <Box className='hidden lg:flex flex-col space-y-7'>
             <Link href='/' className='font-bold text-xl transition hover:text-gray-400'>Home</Link>
             <Link href='/' className='font-bold text-xl transition hover:text-gray-400'>Reviews</Link>
             <Link href='/' className='font-bold text-xl transition hover:text-gray-400'>All Games</Link>
