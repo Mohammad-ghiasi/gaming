@@ -17,21 +17,19 @@ export default function GameCard({ game }: Props) {
         <Card
             overflow='hidden'
             transition='all .3s'
-            className=''
             _hover={{
                 boxShadow: '6px 10px 30px  #46424245',
                 transform: 'scale(1.04)'
             }}
-            height='auto'
             cursor='pointer'
         >
             <Box overflow='hidden'>
                 <Img
                     alt={name}
                     src={address}
-                    objectFit='cover'
+                    // objectFit='cover'
                     loading='lazy'
-                    _hover={{ transform: 'scale(1.1) rotate(5deg)' }}
+                    _hover={{ transform: 'scale(1.1) rotate(4deg)'}}
                     transition='all .3s'
                 />
             </Box>

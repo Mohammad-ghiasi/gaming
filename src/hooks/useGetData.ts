@@ -2,6 +2,8 @@ import apiKey from "@/services/apiKey";
 import { useQuery } from "@tanstack/react-query";
 
 export function useGetData(url: string) {
+  let next: string | null = null;
+  let previous: string | null = null;
   const { data, isPending, error, isError } = useQuery({
     queryKey: ["Posts", url],
     // initialData: infos, // important,
@@ -15,8 +17,11 @@ export function useGetData(url: string) {
     },
     // impoertant part... (chnaging data type)
     select: (datas) => {
+      next = datas?.data.next;
+      previous = datas?.data.previous;
       return datas.data.results;
     },
   });
-  return {data, isPending, error, isError}
-};
+  
+  return { data, isPending, error, isError, next, previous };
+}
