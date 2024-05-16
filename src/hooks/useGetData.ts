@@ -10,7 +10,8 @@ export function useGetData(url: string) {
     // placeholderData: infos, // important
     queryFn: async (): Promise<any> => {
       let address: string = url;
-      const datas: any = await apiKey.get("/games").then((res) => {
+      console.log(address);
+      const datas: any = await apiKey.get(address).then((res) => {
         return res;
       });
       return datas;

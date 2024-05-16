@@ -21,9 +21,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ReduxProvider>
-      <html lang="en">
-        <body className={inter.className}>
+    <html lang="en">
+      <body className={inter.className}>
+        <ReduxProvider>
           <Providers>
             <ColorModeScript initialColorMode={theme?.config.initialColorMode} />
             <ReactQueryProvider>
@@ -35,8 +35,8 @@ export default function RootLayout({
               </main>
             </ReactQueryProvider>
           </Providers>
-        </body>
-      </html>
-    </ReduxProvider>
+        </ReduxProvider>
+      </body>
+    </html>
   );
 }

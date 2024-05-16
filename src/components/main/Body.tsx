@@ -10,9 +10,12 @@ import Image from 'next/image';
 import CardSkelton from './cards/CardSkelton';
 
 export default function Body() {
-    const { data, isPending, error, isError } = useGetData("/games")
+    const { data, isPending, error, isError } = useGetData('/games?genres=casual')
     const skelton: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
-
+    console.log(data);
+    console.log(error);
+    
+    
     return (
         <>
             <Flex>
@@ -21,7 +24,7 @@ export default function Body() {
                 </Flex>
                 <Flex flex={{ base: "12", lg: "10" }} justifyContent='center'>
                     <SimpleGrid columns={{ sm: 1, md: 2, xl: 3 }} spacing={18}>
-                        {isPending && skelton.map((item: number) =>
+                        {(!data && isPending) && skelton.map((item: number) =>
                             <CardSkelton key={item} />
                         )}
                         {data?.map((item: game) =>
