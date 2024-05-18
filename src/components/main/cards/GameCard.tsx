@@ -1,17 +1,17 @@
-
-// import { Image } from '@chakra-ui/next-js';
-import { game, platform } from '@/types/gametType';
-import { Card, CardHeader, CardBody, CardFooter, Stack, Heading, Text, Divider, ButtonGroup, Button, Box, Image, Img, VStack, HStack } from '@chakra-ui/react'
+import { game } from '@/types/gametType';
+import { Card, CardBody, Text, Box, Img, HStack } from '@chakra-ui/react'
 import NextImage from 'next/image';
 import Platforms from './Platforms';
 import Score from './Score';
+
 interface Props {
-    game: game
+    game: game;
 }
-export default function GameCard({ game }: Props) {
+
+export default function GameCard({ game }: Props): JSX.Element {
     const { id, name, background_image, parent_platforms, metacritic } = game;
 
-    let address = background_image.replace("/media/", "/media/crop/600/400/");;
+    let address = background_image.replace("/media/", "/media/crop/600/400/");
 
     return (
         <Card
@@ -40,11 +40,6 @@ export default function GameCard({ game }: Props) {
                     <Score score={metacritic} />
                 </HStack>
             </CardBody>
-
-            {/* <Divider />
-            <CardFooter>
-               
-            </CardFooter> */}
         </Card>
     )
 }

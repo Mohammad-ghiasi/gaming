@@ -1,19 +1,21 @@
-import { Box, HStack, Text } from '@chakra-ui/react'
-import Image from 'next/image';
+import { Box, HStack, Img, Text } from '@chakra-ui/react'
 import Link from 'next/link';
 
 
-export default function SubItemImage(props: { text: string, arm: string }) {
-    const { text, arm } = props
+export default function SubItemImage(props: { text?: string, arm?: string }) {
+    const { text, arm } = props;
+    let address = arm?.replace("/media/", "/media/crop/200/200/");
+    console.log(arm);
+    
     return (
-        <Link href='/'>
+        <Link href='/' className='transition hover:translate-x-2'>
             <HStack alignItems='center' transition='all .2s' _hover={{ color: "#7f7f7f" }}>
-                <Box className='relative w-[35px] h-[35px] rounded-md overflow-hidden'>
-                    <Image
+                <Box className='rounded-md overflow-hidden'>
+                    <Img
                         alt='image'
                         src={arm}
-                        fill
                         loading='lazy'
+                        boxSize='37px'
                     />
                 </Box>
                 <Box>

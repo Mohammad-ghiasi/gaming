@@ -10,7 +10,6 @@ export function useGetData(url: string) {
     // placeholderData: infos, // important
     queryFn: async (): Promise<any> => {
       let address: string = url;
-      console.log(address);
       const datas: any = await apiKey.get(address).then((res) => {
         return res;
       });
@@ -20,9 +19,8 @@ export function useGetData(url: string) {
     select: (datas) => {
       next = datas?.data.next;
       previous = datas?.data.previous;
-      return datas.data.results;
+      return datas?.data.results;
     },
   });
-  
   return { data, isPending, error, isError, next, previous };
 }
