@@ -5,10 +5,18 @@ import CardSkelton from './CardSkelton'
 import { game } from '@/types/gametType'
 import GameCard from './GameCard'
 import SimpleGridBox from './SimpleGridBox'
+import { useSelector } from 'react-redux'
 
 
 export default function GameList() {
-    const { data, isPending, error, isError } = useGetData(`/games`)
+    const genres = useSelector((state: {counter: {value: string|null}}) => state.counter.value)
+    let address: string = ''
+
+    if (genres !== null) {
+        address = `?genres=${genres}`
+    }
+
+    const { data, isPending, error, isError } = useGetData(`/games${address}`)
     const skelton: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
     return (
         <SimpleGridBox>

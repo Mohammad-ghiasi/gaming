@@ -1,6 +1,6 @@
 export interface genresType{
     id: number;
     name: string;
-    slug?: string;
+    slug: string;
     image_background: string;
 }

@@ -1,6 +1,5 @@
 "use client"
 import { useGetData } from '@/hooks/useGetData';
-import { Box } from '@chakra-ui/react';
 import React from 'react'
 import GenresSkelton from '../main/cards/GenresSkelton';
 import { genresType } from '@/types/genresType';
@@ -15,7 +14,7 @@ export default function GenresItem() {
                 <GenresSkelton key={item} />
             )}
             {data?.map((item: genresType) =>
-                <SubItemImage key={item.id} text={item.name} arm={item.image_background} />
+                <SubItemImage key={item.id} text={item.name} genre={item.slug} arm={item.image_background} />
             )}
         </>
     )
