@@ -2,10 +2,12 @@ import { configureStore } from '@reduxjs/toolkit'
 // import { counterSlice } from './slices/firstSclice'
 // ...
 import counterReducer from './slices/firstSclice';
+import platforemSlice from './slices/platforemSlice';
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer
+    counter: counterReducer,
+    platform: platforemSlice
   }
 })
 
