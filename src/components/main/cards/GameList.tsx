@@ -12,12 +12,11 @@ export default function GameList() {
     const genres = useSelector((state: {counter: {value: string|null}}) => state.counter.value)
     const platform = useSelector((state: {platform: {value: number|null}}) => state.platform.value)
     let address: string = ''
-    console.log(platform);
-    
+
     if (genres !== null) {
         address = `?genres=${genres}`
     }else if (platform !== null) {
-        address += `?platforms=${platform}`
+        address = `?platforms=${platform}`
     }
 
     const { data, isPending, error, isError } = useGetData(`/games${address}`)
@@ -35,5 +34,3 @@ export default function GameList() {
         </SimpleGridBox>
     )
 }
-
-// ?platforms=31
