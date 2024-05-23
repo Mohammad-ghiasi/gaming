@@ -11,7 +11,8 @@ interface Props {
 export default function GameCard({ game }: Props): JSX.Element {
     const { id, name, background_image, parent_platforms, metacritic } = game;
 
-    let address = background_image.replace("/media/", "/media/crop/600/400/");
+    let address = background_image?.replace("/media/", "/media/crop/600/400/");
+    
 
     return (
         <Card

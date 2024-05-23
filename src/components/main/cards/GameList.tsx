@@ -11,19 +11,22 @@ import { useSelector } from 'react-redux'
 export default function GameList() {
     const genres = useSelector((state: {counter: {value: string|null}}) => state.counter.value)
     const platform = useSelector((state: {platform: {value: number|null}}) => state.platform.value)
-    let address: string = ''
+    const search = useSelector((state: {search: {value: string|null}}) => state.search.value)
+
+    let address: string = '';
 
     if (genres !== null) {
         address = `?genres=${genres}`
     }else if (platform !== null) {
         address = `?platforms=${platform}`
+    }else if (search !== null) {
+        address = `?search=${search}`
     }
 
     const { data, isPending, error, isError } = useGetData(`/games${address}`)
     const skelton: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
     return (
         <SimpleGridBox>
-
             {(!data && isPending) && skelton?.map((item: number) =>
                 <CardSkelton key={item} />
             )}

@@ -7,7 +7,7 @@ import SubItemImage from './SubItemImage';
 
 export default function GenresItem() {
     const { data, isPending, error, isError } = useGetData(`/genres`);
-    const skelton: number[] = [1, 2, 3, 4, 5, 6]
+    const skelton: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
     return (
         <>
             {(!data && isPending) && skelton?.map((item: number) =>

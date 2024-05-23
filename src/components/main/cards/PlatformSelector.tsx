@@ -11,7 +11,6 @@ export default function PlatformSelector() {
     const dispatch = useDispatch()
     const [selectedPlatform, setSelectedPlatform] = useState<string | "Platforms">("Platforms")
     const { data, isPending, error, isError } = useGetData(`/platforms`);
-    console.log(data)
     
     return (
         <Menu>

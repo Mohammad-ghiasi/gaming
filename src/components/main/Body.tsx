@@ -11,7 +11,7 @@ export default function Body() {
                 <VerticalNav />
             </Flex>
             <Flex flex={{ base: "12", lg: "10" }} justifyContent='center' flexDirection='column'>
-                <Box className="mb-6">
+                <Box className="mb-6 ">
                     <PlatformSelector />
                 </Box>
                 <GameList />

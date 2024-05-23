@@ -6,7 +6,7 @@ export default function GenresSkelton() {
     <>
         <HStack>
             <SkeletonCircle startColor="gray.600" endColor="gray.500" />
-            <SkeletonText width='110px' startColor="gray.500" endColor="gray.500" />
+            <SkeletonText noOfLines={2} width='110px' startColor="gray.500" endColor="gray.500" />
         </HStack>
     </>
   )

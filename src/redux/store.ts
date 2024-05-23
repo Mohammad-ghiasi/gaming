@@ -3,11 +3,14 @@ import { configureStore } from '@reduxjs/toolkit'
 // ...
 import counterReducer from './slices/firstSclice';
 import platforemSlice from './slices/platforemSlice';
+import searchSlice from './slices/searchSlice';
+
 
 export const store = configureStore({
   reducer: {
     counter: counterReducer,
-    platform: platforemSlice
+    platform: platforemSlice,
+    search: searchSlice
   }
 })
 
