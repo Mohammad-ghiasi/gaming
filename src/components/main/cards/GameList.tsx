@@ -16,15 +16,17 @@ export default function GameList() {
     let address: string = '';
 
     if (genres !== null) {
-        address = `?genres=${genres}`
+        address = `?genres=${genres}`;
     }else if (platform !== null) {
-        address = `?platforms=${platform}`
+        address = `?platforms=${platform}`;
     }else if (search !== null) {
-        address = `?search=${search}`
-    }
+        address = `?search=${search}`;
+    };
 
-    const { data, isPending, error, isError } = useGetData(`/games${address}`)
-    const skelton: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+    const { data, isPending, error, isError } = useGetData(`/games${address}`);
+    console.log(data);
+    
+    const skelton: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
     return (
         <SimpleGridBox>
             {(!data && isPending) && skelton?.map((item: number) =>

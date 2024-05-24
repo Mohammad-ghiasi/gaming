@@ -8,5 +8,10 @@ export interface game{
     name: string;
     background_image: string;
     parent_platforms: {platform: platform}[];
-    metacritic: number;
+    ratings_count: number;
+    genres: {
+        id: number;
+        name: string;
+    }[];
+    released: string
 }
