@@ -6,6 +6,7 @@ export interface platform{
 export interface game{
     id: number;
     name: string;
+    slug: string;
     background_image: string;
     parent_platforms: {platform: platform}[];
     ratings_count: number;

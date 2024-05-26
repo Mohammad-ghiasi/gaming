@@ -11,11 +11,11 @@ export default function ReactQueryProvider({ children }: { children: React.React
                     // Don't automatically refetch queries when the window regains focus
                     refetchOnWindowFocus: false,
                     // Time in milliseconds after which the data is considered stale
-                    staleTime: 900000,
+                    staleTime: 1000000,
                     // Garbage collection time in milliseconds for cached queries
-                    gcTime: 30000,
+                    gcTime: 100000,
                     // Time interval in milliseconds to automatically refetch queries
-                    refetchInterval: 5000,
+                    refetchInterval: false,
                     // Don't automatically refetch queries when the network reconnects
                     refetchOnReconnect: false,
                     // Retry failed queries after this delay in milliseconds

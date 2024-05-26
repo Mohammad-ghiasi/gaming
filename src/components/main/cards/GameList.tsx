@@ -23,8 +23,7 @@ export default function GameList() {
         address = `?search=${search}`;
     };
 
-    const { data, isPending, error, isError } = useGetData(`/games${address}`);
-    console.log(data);
+    const { data, isPending, error, isError, next, previous } = useGetData(`/games${address}`);
     
     const skelton: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
     return (
