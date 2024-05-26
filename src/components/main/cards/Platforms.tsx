@@ -32,7 +32,7 @@ export default function Platforms({ platforms }: Props) {
     }
     return (
         <HStack >
-            {platforms.map((platform: any) => <Icon key={platform.id} color='gray.400'  className="transition hover:text-orange-500" as={iconMap[platform.slug]} />)}
+            {platforms?.map((platform: any) => <Icon key={platform.id} color='gray.400'  className="transition hover:text-orange-500" as={iconMap[platform.slug]} />)}
         </HStack>
     )
 }
